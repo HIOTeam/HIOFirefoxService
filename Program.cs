@@ -25,21 +25,15 @@ namespace Firefox
         public string data;
     };
 
-
     /// <summary>
-    /// Provides a container class for the example.
+    /// Creates the app service connection
     /// </summary>
     public class Firefox
     {
         public static string PATHMSGREC = @".\Private$\MSGHIO1FF"+ System.Security.Principal.WindowsIdentity.GetCurrent().Name.Split('\\').Last();
         public static  string PATHMSGSEND = @".\Private$\MSGHIO2"+ System.Security.Principal.WindowsIdentity.GetCurrent().Name.Split('\\').Last();
         public static string BROWSER = "Firefox";
-        //**************************************************
-        // Provides an entry point into the application.
-        //		 
-        // This example sends and receives a message from
-        // a queue.
-        //**************************************************
+        
 
         private static AutoResetEvent _signal = new AutoResetEvent(false);
         private static AutoResetEvent _signalRec = new AutoResetEvent(false);
